@@ -5,7 +5,7 @@ import java.util.Scanner;
  */
 public class actividad4 {
     static Scanner lt=new Scanner(System.in);
-    public static void actividad41(){
+    public static void actividadLVM41(){
         //definir variables
         int numerox;
         double salario=1500;
@@ -17,7 +17,7 @@ public class actividad4 {
         System.out.println("el salario al cabo de "+(i+1)+" años es de:"+salario);
         }
     } 
-    public static void actividad43() {
+    public static void actividadLVM43() {
         //Definir variables
         int conta0=0,mas=0,menos=0, n,num;
         //Datos de entrada
@@ -38,7 +38,7 @@ public class actividad4 {
         System.out.println("cantidad de numeros mayor a 0 es: "+mas);
         System.out.println("cantidad de numeros menor a 0 es: "+menos);
     }
-    public static void actividad48() {
+    public static void actividadLVM48() {
         //Definir variables
         int anhos;
         double saldo=0, interes=0, total=0, deposito=0;
@@ -54,7 +54,7 @@ public class actividad4 {
         }
 
 
-        
+
         interes=interes+(saldo*0.10);
         total=saldo+interes;
         anhos=anhos-1;
@@ -65,7 +65,7 @@ public class actividad4 {
         System.out.println("Tu ahorro ya con interes es: "+total);
         System.out.println(" ");
     }
-    public static void actividad49() {
+    public static void actividadLVM49() {
         //Definir datos
         int numero;
         int salones;
@@ -91,7 +91,7 @@ public class actividad4 {
         }
         System.out.println("El promedio de toda la escuela es: "+(total/alumnos)+" años");
     }
-    public static void actividad411(){
+    public static void actividadLVM411(){
         Scanner in = new Scanner(System.in); 
         //definir variables
         int bi10, bi20, bi50, bi100, bi200;
@@ -134,7 +134,7 @@ public class actividad4 {
         total=bi10*10+bi20*20+bi50*50+bi100*100+bi200*200+mone01*01+mone02*02+mone05*05+mone_2*2+mone_5*5+mone_1;
         System.out.println("Valor de total: " + total);
     }
-    public static void actividad412() {
+    public static void actividadLVM412() {
         //Definir variables
         int nm;
         int venta;
@@ -169,7 +169,7 @@ public class actividad4 {
 	    System.out.println("El total de las ventas menores a $10,000: "+t3);
 	    System.out.println("El monto total de la ventas es: $"+t);
     }
-    public static void actividad416(){
+    public static void actividadLVM416(){
         //definir variables
         int M ;
         //datos de entrada y salida
@@ -184,7 +184,7 @@ public class actividad4 {
     
         }
     } 
-    public static void actividad420() {
+    public static void actividadLVM420() {
         Scanner in = new Scanner(System.in); 
         //definir variables
         int monedas1, monedas2, monedas5, billetes10, billetes20, billetes50;
@@ -211,7 +211,7 @@ public class actividad4 {
         cantdinero=(monedas1*1)+(monedas2*1)+(monedas5*1)+(billetes10*1)+(billetes20*1)+(billetes50*1);
         System.out.println(" cantidad de dinero: " + cantdinero);
     }
-    public static void actividad424() {
+    public static void actividadLVM424() {
         //definir variables
         int intentos = 4;
         int numero;
@@ -222,7 +222,7 @@ public class actividad4 {
           System.out.print("Introduzca la clave de la caja fuerte:) ");
           numero = Integer.parseInt(System.console().readLine());
           
-          if (numero == 2004) {
+          if (numero == 2022) {
             logrado = true;
           } else {
             System.out.println("Clave incorrecta :(");
@@ -238,7 +238,7 @@ public class actividad4 {
           System.out.println("Lo siento, ha agotado las 4 oportunidades :(");
         }
       }
-      public static void actividad425() {
+      public static void actividadLVM425() {
         //DEFINIR VARIABLES
         double n = 0;
         double numero = 0;
@@ -258,6 +258,6 @@ public class actividad4 {
         System.out.println((suma - numero) / (n - 1));
       }
     public static void main(String[] args) {
-        actividad48();
+        actividadLVM424();
     }
 }
