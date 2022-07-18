@@ -26,6 +26,8 @@ public class VentaDao extends AppCrud{
         util.clearConsole();
         System.out.println("******TABLA_VENTA*****");
         String dnix=leerT.leer("", "Ingrese DNI del cliente");
+        VentaTO vTo=new
+
         if (validarCliente(dnix)) {
             vTo=new VentaTO();
             vTo.setDni(dnix);

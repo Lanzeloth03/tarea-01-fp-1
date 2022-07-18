@@ -1,11 +1,12 @@
-package pe.edu.upeu.app;
+package pe.edu.upeu.cafeteria;
 
 import java.io.Console;
-
-import pe.edu.upeu.dao.CategoriDao;
+import pe.edu.upeu.dao.CategoriaDao;
 import pe.edu.upeu.dao.ClienteDao;
-import pe.edu.upeu.dao.ModeloDao;
+import pe.edu.upeu.dao.ProductoDao;
+import pe.edu.upeu.dao.DetalleProductoDao;
 import pe.edu.upeu.dao.UsuarioDao;
+import pe.edu.upeu.dao.VentaDao;
 import pe.edu.upeu.modelo.UsuarioTO;
 import pe.edu.upeu.util.LeerTeclado;
 
@@ -21,27 +22,29 @@ public class MenuOpciones {
         System.out.println("Ingrese su clave:");
         char[] clavex=cons.readPassword();
         user.setClave(String.valueOf(clavex));
-        if (user.getUsuario().equals("davidmp") && 
-        user.getClave().equals("123456")) {
-            menuPrincial();
+        if (new UsuarioDao().loginValidar(user.getUsuario(), user.getClave())) {
+            menuPrincipal();
         }else{
             System.out.println("Intente Otra vez!");
             login();
         }
     }
 
-    public void menuPrincial() {
+    public void menuPrincipal() {
         System.out.println("********************Bienvenidos al Sistema de Ventas******************");
-        String valorX="1=Registrar Usuario\n"+"2=Registrar Categoria\n"+
-                "3=Registrar cliente\n4=Registrar Modelo";
+        String valorX="1=Registrar Usuario\n"+"2=Registrar Cliente\n"+
+                "3=Registrar Categoria\n4=Registrar Producto\n"+
+                "5=Crear DetalleProducto\n6=Ventas\n7=Reporte Ventas\n";
         int opciones=0;
         do {
             switch (opciones) {
                 case 1: new UsuarioDao().crearUsuario(); break;
-                case 2: new CategoriDao().crearCategoria(); break;
-                case 3: new ClienteDao().crearCliente();break;
-                case 4: new ModeloDao().crearModelo();break;
-                case 4: new ModeloDao().crearProducto();break;
+                case 2: new ClienteDao().crearCliente(); break;
+                case 3: new CategoriaDao().crearCategoria();break;
+                case 4: new ProductoDao().crearProducto();break;
+                case 5: new DetalleProductoDao().crearDetalleProducto();break;
+                case 6: new VentaDao().registroVentaGeneral();break;
+                case 7: new VentaDao().reporteVentas();break;
                 default: System.out.println("Opcion erronea!"); break;
             }
             char continuar=leerT.leer("", "Desea continuar? S=si/N=no")
@@ -54,5 +57,4 @@ public class MenuOpciones {
         } while (opciones!=0);
         
     }
-
 }
